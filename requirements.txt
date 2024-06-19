@@ -1,6 +1,7 @@
 asgiref==3.7.2
 distro==1.7.0
 Django==5.0.1
+
 exceptiongroup==1.2.0
 importlib-metadata==4.6.4
 jeepney==0.7.1
