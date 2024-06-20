@@ -1,6 +1,6 @@
 from django.db import models
 
-
+NULLABLE = {"blank": True, "null": True}
 class Category(models.Model):
     category_name = models.CharField(max_length=50, verbose_name="Наименование")
     category_description = models.TextField(verbose_name="Описание")
@@ -43,6 +43,10 @@ class Product(models.Model):
         verbose_name="Цена",
         help_text="Введите цену",
     )
+
+    created_at = models.DateField(verbose_name="Дата создания", **NULLABLE)
+    updated_at = models.DateField(verbose_name="Дата изменения", **NULLABLE)
+
 
     def __str__(self):
         return f"{self.product_name}: {self.price}"
